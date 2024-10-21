@@ -80,8 +80,10 @@
         <script>
             function displayDate() {
                 const today = new Date();
-                const date = today.toDateString();
-                document.getElementById("current-date").innerHTML = date;
+                const day = today.getDate();
+                const year = today.getFullYear();
+                const month = today.toLocaleString('default', { month: 'short' });
+                document.getElementById("current-date").innerHTML = `${month} ${day} ${year}`;
             }
         </script>
 
